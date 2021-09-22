@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
-function App() {
+import Login from './Pages/Login.js'
+import Home from './Pages/Home.js'
+import CadastrarRemedio from './Pages/CadastrarRemedio.js'
+import ConsultarRemedio from './Pages/ConsultarRemedio.js'
+import Historico from './Pages/Historico.js'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div >
+      <div>
+        <Router>
+          <div>
+            <Switch>
+              <Route exact path={'/'} component={Login} />
+              <Route exact path={'/Home'} component={Home} />
+              <Route exact path={'/CadastrarRemedio'} component={CadastrarRemedio} />
+              <Route exact path={'/ConsultarRemedio'} component={ConsultarRemedio} />
+              <Route exact path={'/Historico'} component={Historico} />
+            </Switch>
+          </div>
+        </Router>
+      </div>
+    </div >
   );
 }
 

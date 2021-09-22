@@ -1,0 +1,13 @@
+.Header {
+    width: 100%;
+    background-color: black;
+    height: 40px;
+    text-align:center;
+    margin-right: 0;
+}
+
+.menu {
+    color: white;
+    font-weight: 500;
+    cursor:pointer;
+}
